@@ -1,0 +1,6 @@
+{
+  "algorithm": "FIFO",
+  "frames": 1,
+  "references": [1, 1, 1, 1, 1, 1],
+  "trace": true
+}
