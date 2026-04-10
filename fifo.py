@@ -23,3 +23,11 @@ class fifo:
                     frames.append(r)    #Replace with new page
             if trace == True:   #Print trace if desired
                 print("---------------------------------------------------------------\nIteration ", i, "\nRemaining Pages ",  ref[i:], "\nCurrent Page: ", r, "\nFrame: ", frames, "\nFaults:", faults, "\nHits:", hits, "\n\n")
+
+        return {
+            "algorithm": "FIFO",
+            "frames": maxFrames,
+            "faults": faults,
+            "hits": hits,
+            "final_frames": frames
+        }

@@ -1,0 +1,7 @@
+{
+    "algorithm": "LRU",
+    "frames": 3,
+    "faults": 4,
+    "hits": 0,
+    "final_frames": [2, 3, 4]
+}
