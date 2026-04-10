@@ -31,7 +31,7 @@ if frames <= 0:
 if algo == "FIFO":
     fifo.run( frames, ref, trace)
 elif algo == "LRU":
-    lru(frames, ref)
+    lru(frames, ref, trace)
 elif algo == "CLOCK":
     clock(frames, ref)
 else:
