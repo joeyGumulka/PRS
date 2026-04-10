@@ -2,10 +2,9 @@
 import json
 import sys
 from fifo import fifo
-#TEMP PLACEHOLDER FUNCTIONS
+from lru import lru
 
-def lru(frames, ref, trace):
-    print("LRU NOT IMPLIMENTED YET")
+#TEMP PLACEHOLDER FUNCTIONS
 
 def clock(frames, ref, trace):
     print("CLOCK NOT IMPLIMENTED YET")
@@ -29,10 +28,25 @@ if frames <= 0:
 
 #Check algorithm type stated in provided json and run appropriate algorithm
 if algo == "FIFO":
-    fifo.run( frames, ref, trace)
+    result = fifo.run( frames, ref, trace)
 elif algo == "LRU":
-    lru(frames, ref, trace)
+    result = lru.run(frames, ref, trace)
 elif algo == "CLOCK":
     clock(frames, ref)
 else:
     sys.exit(1)
+
+#Formatting and dumping results to json (requested format is annoying not automatic so need to  manually space out and fix the json)
+
+base = {    #all outputs except the list (list needs special formatting to print all in one line like in provided example output)
+    "algorithm": result["algorithm"],
+    "frames": result["frames"],
+    "faults": result["faults"],
+    "hits": result["hits"]
+}
+
+with open("output.json", "w") as f:
+    f.write(json.dumps(base, indent=4)[:-2])  # remove closing }
+    f.write(',\n    "final_frames": ')
+    f.write(json.dumps(result["final_frames"]))
+    f.write("\n}")  #Re-add closing bracket
