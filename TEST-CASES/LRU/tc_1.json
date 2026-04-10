@@ -1,0 +1,6 @@
+{
+    "algorithm": "LRU",
+    "frames": 3,
+    "references": [1, 2, 3, 4],
+    "trace": true
+}
