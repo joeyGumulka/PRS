@@ -4,10 +4,10 @@ A page replacement simulator created for "COMP330; Operating Systems", to be use
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 ## ABOUT
 
-Course: COMP3300
-Submission Date: April 15th, 2026
-Authors: Basra, Vedant & Gumulka, Joey
-Python Version: Python 3.14.4
+- Course: COMP3300
+- Submission Date: April 15th, 2026
+- Authors: Basra, Vedant & Gumulka, Joey
+- Python Version: Python 3.14.4
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 ## AI USAGE STATEMENT
