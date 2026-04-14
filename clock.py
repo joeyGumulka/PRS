@@ -44,6 +44,7 @@ class clock:
                 print(f"---------------------------------------------------------------")
                 print(f"Iteration: {i}")
                 print(f"Current Page: {r}")
+                print(f"Remaining Pages {ref[i:]}")
                 print(f"Frames: {display_frames}")
                 print(f"Hand Position: {hand}")
                 print(f"Faults: {faults}")
