@@ -1,7 +1,7 @@
 {
-    "algorithm": "LRU",
+    "algorithm": "Clock",
     "frames": 3,
     "faults": 4,
-    "hits": 0,
-    "final_frames": [2, 3, 4]
+    "hits": 1,
+    "final_frames": [4, 2, 3]
 }

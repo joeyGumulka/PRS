@@ -3,11 +3,9 @@ import json
 import sys
 from fifo import fifo
 from lru import lru
+from clock import clock
 
-#TEMP PLACEHOLDER FUNCTIONS
 
-def clock(frames, ref, trace):
-    print("CLOCK NOT IMPLIMENTED YET")
 
 input_file = sys.argv[1]    #Take input filepath as command-line arguement
 
@@ -32,7 +30,7 @@ if algo == "FIFO":
 elif algo == "LRU":
     result = lru.run(frames, ref, trace)
 elif algo == "CLOCK":
-    clock(frames, ref)
+    result = clock.run(frames, ref, trace)
 else:
     sys.exit(1)
 
