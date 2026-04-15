@@ -1,0 +1,6 @@
+{
+    "algorithm": "Clock",
+    "frames": 4,
+    "references": [1, 2, 3, 4, 1, 2, 3, 4, 5],
+    "trace": true
+}
