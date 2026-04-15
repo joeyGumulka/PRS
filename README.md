@@ -25,7 +25,7 @@ FIFO - No tie-breaking policy is needed for FIFO as pages are inserted into fram
 
 LRU - A tie-breaking policy is not needed for LRU as in our simple simulation pages are accessed one at a time, thus there will always be exactly one “Least Recently Used” page (front of the queue) in the available frames at any given time.
 
-Clock (Second-Chance) - A tie-breaking policy is not needed for clock either. If multiple pages have the bit of 0 simultaniously, the clock hand enforces a circular motion of evaluation. The algorithm selects the first page encountered by the hand.
+Clock (Second-Chance) - The tie-breaking policy used in Clock is the one defined in the project guideline, i.e. evict the smallest page when equal priority. This happens when all the bits are either 0 or 1 and thus the algorithm finds the smallest page to evict.
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------

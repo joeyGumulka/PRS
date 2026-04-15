@@ -1,10 +1,13 @@
+''' this implementation of clock is consistent with the actual clock page 
+replacement algorithm '''
+
 class clock:
     def run(maxFrames, ref, trace):
         frames = []  
         faults = 0
         hits = 0
         i = 0
-        hand = 0  
+        hand = 0  # The "clock hand" pointing to the current frame index
 
         for r in ref:
             i += 1
@@ -21,29 +24,22 @@ class clock:
             if not page_found:
                 faults += 1
                 if len(frames) < maxFrames:
-                    # case where still have empty frames available adding page with use bit set to 1
+                    # case where still have empty frames available
+                    # adding page with use bit set to 1
                     frames.append([r, 1])
                 else:
                     # case where frames are full, clock replacement performed
                     while True:
-                        # identify all pages currently having a use bit of 0
-                        candidates = [idx for idx, f in enumerate(frames) if f[1] == 0]
+                        current_page = frames[hand]
                         
-                        if candidates:
-                            # tie-breaker: If multiple pages have use bit 0, evict the one with the smallest page number 
-                            best_index = min(candidates, key=lambda idx: frames[idx][0])
-                            
-                            # 3. Replace the selected page
-                            frames[best_index] = [r, 1]
-                            
-                            # update the hand to be right after the replaced frame 
-                            hand = (best_index + 1) % maxFrames
+                        if current_page[1] == 0:
+                            # replace this page if use bit was 0
+                            frames[hand] = [r, 1]
+                            hand = (hand + 1) % maxFrames
                             break
                         else:
-                            # if all use bits are 1, everyone gets their "second chance" flipped to 0, and we re-scan to find the smallest page 
-                            for frame in frames:
-                                frame[1] = 0
-                            # hand continues moving in a circular fashion logically
+                            # second chance
+                            current_page[1] = 0
                             hand = (hand + 1) % maxFrames
 
             if trace:
