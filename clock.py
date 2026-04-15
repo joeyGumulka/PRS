@@ -33,7 +33,7 @@ class clock:
                             # tie-breaker: If multiple pages have use bit 0, evict the one with the smallest page number 
                             best_index = min(candidates, key=lambda idx: frames[idx][0])
                             
-                            # 3. Replace the selected page
+                            # replace the selected page
                             frames[best_index] = [r, 1]
                             
                             # update the hand to be right after the replaced frame 
