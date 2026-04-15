@@ -18,9 +18,15 @@ Throughout the development of our page replacement simulator mini project as a g
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Tie-Breaking Policy
-- FIFO: The page at index 0 is evicted, as it has been in memory the longest since its initial load.
-- recency by moving recently accessed (“hit”) pages to the end of the array, ensuring that the least recently used page shifts to index 0 and is selected for eviction in tie situations.
-- Clock (Second Chance): The first page encountered with a use bit of 0 is evicted. If all pages have a use bit of 1, the algorithm completes a full rotation, resetting use bits to 0, and then evicts the page at the current hand position
+
+In regard to the implementation of a tie-breaking policy in our project, only 1 of the 3 page replacement policies we were tasked with implementing could ever result in a tie, thus it was the only one for which consideration of a tie-breaking policy was needed.
+
+FIFO - No tie-breaking policy is needed for FIFO as pages are inserted into frames in a strictly sequential order, meaning there is always a clearly defined “First In” page regardless of input.
+
+LRU - A tie-breaking policy is not needed for LRU as in our simple simulation pages are accessed one at a time, thus there will always be exactly one “Least Recently Used” page (front of the queue) in the available frames at any given time.
+
+Clock (Second-Chance) - FOR VEDANT TO WRITE
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 ## DESIGN DECISIONS
