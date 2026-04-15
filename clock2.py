@@ -7,7 +7,7 @@ class clock:
         faults = 0
         hits = 0
         i = 0
-        hand = 0  # The "clock hand" pointing to the current frame index
+        hand = 0  # the "clock hand" pointing to the current frame index
 
         for r in ref:
             i += 1
