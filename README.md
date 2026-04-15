@@ -9,6 +9,7 @@ Course: COMP3300
 Submission Date: April 15th, 2026
 Authors: Basra, Vedant & Gumulka, Joey
 Python Version: Python 3.14.4
+Repository: https://github.com/joeyGumulka/PRS
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 ## AI USAGE STATEMENT
@@ -23,4 +24,5 @@ Throughout the development of our page replacement simulator mini project as a g
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 ## DESIGN DECISIONS
-To facilitate organization and collaboration, the project is hosted on a GitHub repository (https://github.com/joeyGumulka/PRS). Each algorithm is implemented in its own class file to maintain clarity and modularity, while main.py serves as the entry point of the program. The main.py file is responsible for handling input and output operations with JSON files and coordinating the execution of the algorithm classes. Additionally, each algorithm is supported by at least ten test cases to thoroughly evaluate functionality, including various edge cases.
+
+Throughout the development of our page replacement simulator mini project we discussed and made multiple design decisions that I believe strongly contributed to our overall success. Firstly, we made the choice to host our project on a GitHub repository (https://github.com/joeyGumulka/PRS) which allowed for organization of our work into distinct branches while simultaneously enabling seamless collaboration. Furthermore, another design decision that greatly improved the quality of our project as a whole was the application of OOP design principles, most significantly for this project, encapsulation. Each of the 3 page replacement policies was coded in a separate class, allowing us to reuse a single main file for running all inputs regardless of the policy specified. Doing this allowed a significant reduction in the volume of code required to make our project functional, as well as providing much easier readability and troubleshooting. Moreover, another meaningful design decision that we found to be of great benefit when collaborating with group members was ensuring all code was very well commented, thereby reducing the amount of time needed for one group member to understand the purpose of code contributed by others without the need for extensive manual clarification each time.
