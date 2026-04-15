@@ -1,17 +1,19 @@
 # PRS
+
 A page replacement simulator created for "COMP330; Operating Systems", to be used as the Mini Project Assignment submission.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 ## ABOUT
 
-- Course: COMP3300
-- Submission Date: April 15th, 2026
-- Authors: Basra, Vedant & Gumulka, Joey
-- Python Version: Python 3.14.4
+Course: COMP3300
+Submission Date: April 15th, 2026
+Authors: Basra, Vedant & Gumulka, Joey
+Python Version: Python 3.14.4
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 ## AI USAGE STATEMENT
-AI tools were used as supportive learning resources during this project. Specifically, Google’s Gemini and OpenAI’s ChatGPT assisted in clarifying the algorithms behind FIFO, LRU, and Clock (Second Chance) page replacement methods, as well as in understanding how to read from and write to JSON files.
+
+Throughout the development of our page replacement simulator mini project as a group we selectively made use of AI tools primarily with the goal of work efficiency and test case verification. As a group we made use of the following LLMs; ChatGPT, Gemini, and Claude. Intelligent application of these LLMs allowed for significant reduction in the amount of time spent searching for examples of Python syntax as well as features of the language (i.e. lists), for which we were fairly unfamiliar. Essentially, AI was used to provide generic examples of conditional structures, library calls, and list manipulation. This is to say that all code and comments were written manually by hand with AI serving as nothing more than a more efficient way to reference documentation rather than manually searching. Moreover, we also made use of AI tools to assist in creating test cases, ensuring that they covered as many unique situations and edge cases as feasible.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Tie-Breaking Policy
