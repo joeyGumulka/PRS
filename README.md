@@ -5,11 +5,11 @@ A page replacement simulator created for "COMP330; Operating Systems", to be use
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 ## ABOUT
 
-Course: COMP3300
-Submission Date: April 15th, 2026
-Authors: Basra, Vedant & Gumulka, Joey
-Python Version: Python 3.14.4
-Repository: https://github.com/joeyGumulka/PRS
+- Course: COMP3300
+- Submission Date: April 15th, 2026
+- Authors: Basra, Vedant & Gumulka, Joey
+- Python Version: Python 3.14.4
+- Repository: https://github.com/joeyGumulka/PRS
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 ## AI USAGE STATEMENT
@@ -25,7 +25,7 @@ FIFO - No tie-breaking policy is needed for FIFO as pages are inserted into fram
 
 LRU - A tie-breaking policy is not needed for LRU as in our simple simulation pages are accessed one at a time, thus there will always be exactly one “Least Recently Used” page (front of the queue) in the available frames at any given time.
 
-Clock (Second-Chance) - FOR VEDANT TO WRITE
+Clock (Second-Chance) - A tie-breaking policy is not needed for clock either. If multiple pages have the bit of 0 simultaniously, the clock hand enforces a circular motion of evaluation. The algorithm selects the first page encountered by the hand.
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
